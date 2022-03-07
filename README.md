@@ -1,0 +1,2 @@
+# AI
+For educational purpose
