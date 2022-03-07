@@ -1,4 +1,4 @@
-import graph as gp
+from graph import Graph
 
 
 def AStarSearch(g, start, goal):
@@ -28,7 +28,7 @@ def AStarSearch(g, start, goal):
 
 if __name__ == "__main__":
 
-    g = gp.Graph()
+    g = Graph()
 
     # ADDING NODES TO THE GRAPH
     g.addNode("A", 0)
