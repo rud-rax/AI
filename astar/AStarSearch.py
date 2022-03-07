@@ -1,4 +1,4 @@
-from graph import Graph
+from graph import HeuristicGraph
 
 
 def AStarSearch(g, start, goal):
@@ -28,7 +28,7 @@ def AStarSearch(g, start, goal):
 
 if __name__ == "__main__":
 
-    g = Graph()
+    g = HeuristicGraph()
 
     # ADDING NODES TO THE GRAPH
     g.addNode("A", 0)
