@@ -15,8 +15,8 @@ class Graph:
 
     def addEdge(self, n1, n2):
 
-        self.graph[n1].append([n2])
-        self.graph[n2].append([n1])
+        self.graph[n1].append(n2)
+        self.graph[n2].append(n1)
 
     def getAdjNodes(self, node):
         return self.graph[node]
@@ -111,35 +111,57 @@ class HeuristicGraph(WeightedGraph):
 
 if __name__ == "__main__":
 
-    g = HeuristicGraph()
+    # g = HeuristicGraph()
 
-    # ADDING NODES TO THE GRAPH
-    g.addNode("A", 0)
-    g.addNode("B", 1)
-    g.addNode("C", 3)
-    g.addNode("D", 2)
-    g.addNode("E", 1)
-    g.addNode("F", 2)
-    g.addNode("G", 0)
+    # # ADDING NODES TO THE GRAPH
+    # g.addNode("A", 0)
+    # g.addNode("B", 1)
+    # g.addNode("C", 3)
+    # g.addNode("D", 2)
+    # g.addNode("E", 1)
+    # g.addNode("F", 2)
+    # g.addNode("G", 0)
 
-    # ADDING EDGES TO THE GRAPH
-    g.addEdge("A", "B", 3)
-    g.addEdge("A", "C", 2)
-    g.addEdge("B", "D", 4)
-    g.addEdge("D", "E", 5)
-    g.addEdge("E", "C", 6)
-    g.addEdge("F", "C", 7)
-    g.addEdge("E", "G", 1)
-    g.addEdge("F", "G", 2)
+    # # ADDING EDGES TO THE GRAPH
+    # g.addEdge("A", "B", 3)
+    # g.addEdge("A", "C", 2)
+    # g.addEdge("B", "D", 4)
+    # g.addEdge("D", "E", 5)
+    # g.addEdge("E", "C", 6)
+    # g.addEdge("F", "C", 7)
+    # g.addEdge("E", "G", 1)
+    # g.addEdge("F", "G", 2)
 
-    g.displayAdjList()
-    g.displayHCList()
+    # g.displayAdjList()
+    # g.displayHCList()
 
-    # print(g.getAdjNodes("C"))
+    # # print(g.getAdjNodes("C"))
 
-    # print(g.getHeuristicCost("C"))
+    # # print(g.getHeuristicCost("C"))
 
-    print("DISTANCE COST = ", g.getDistanceCost("A", "C"))
+    # print("DISTANCE COST = ", g.getDistanceCost("A", "C"))
 
-    g.prioritiseAdjNodes()
+    # g.prioritiseAdjNodes()
+    # g.displayAdjList()
+
+    g = Graph()
+    g.addNode("A")
+    g.addNode("B")
+    g.addNode("C")
+    g.addNode("D")
+    g.addNode("E")
+    g.addNode("F")
+    g.addNode("G")
+
+    g.addEdge("A", "C")
+    g.addEdge("C", "B")
+    g.addEdge("A", "B")
+    g.addEdge("C", "D")
+    g.addEdge("C", "E")
+    g.addEdge("D", "G")
+    g.addEdge("E", "F")
+    g.addEdge("A", "F")
+    g.addEdge("F", "G")
+
+    g.getAdjNodes("A")
     g.displayAdjList()
